@@ -1,7 +1,7 @@
 
 
 //Images
-import Book from "../assets/livro.png"
+import Book from "../assets/books.png"
 import heart from "../assets/heart.png"
 import HeartBeat from "../assets/heartbeat.png"
 import Economics from "../assets/economics.png"

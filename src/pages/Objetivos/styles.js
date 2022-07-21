@@ -14,7 +14,7 @@ export const Content = styled.div`
 
 export const ContainerExplanation = styled.div`
   width: 100%;
-  height: 70vh;
+  height: 70%;
   margin-inline: auto;
   
 
@@ -23,7 +23,7 @@ export const ContainerExplanation = styled.div`
   flex-wrap: wrap;
   gap: 16px;
 
-  padding-inline: 16px;
+  padding: 16px;
   margin-bottom: 80px;
 
   color: #fff;
@@ -66,8 +66,9 @@ export const BoxImageGoal = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  
   img {
-    max-width: 400px;
+    max-width: 380px;
     object-fit: cover;
   }
   
@@ -76,9 +77,9 @@ export const BoxImageGoal = styled.div`
       max-width: 300px;
     }
   }
-  @media(max-width: 350px) {
+  @media(max-width: 400px) {
     img {
-      max-width: 250px;
+      max-width: 200px;
     }
   }
 
