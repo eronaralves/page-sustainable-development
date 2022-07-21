@@ -14,19 +14,24 @@ export const Content = styled.div`
 
 export const ContainerExplanation = styled.div`
   width: 100%;
-  max-width: 1200px;
-  height: 60vh;
+  height: 70vh;
   margin-inline: auto;
   
 
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
 
   padding-inline: 16px;
   margin-bottom: 80px;
 
   color: #fff;
   background-color: ${props => `${props.background}`};
+
+  @media(max-width: 765px) {
+    justify-content: center;
+  }
   
 `
 
@@ -65,7 +70,18 @@ export const BoxImageGoal = styled.div`
     max-width: 400px;
     object-fit: cover;
   }
- 
+  
+  @media(max-width: 765px) {
+    img {
+      max-width: 300px;
+    }
+  }
+  @media(max-width: 350px) {
+    img {
+      max-width: 250px;
+    }
+  }
+
   
 `
 
@@ -78,6 +94,7 @@ export const ContainerGoals = styled.div`
 
 
 export const List = styled.ul`
+  padding-inline: 16px;
   list-style: none;
 
   li {

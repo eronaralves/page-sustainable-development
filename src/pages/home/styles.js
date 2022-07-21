@@ -31,5 +31,9 @@ export const ContainerGoals = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 16px;
+
+  @media(max-width: 940px) {
+    justify-content: space-evenly;
+  }
 `

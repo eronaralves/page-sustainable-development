@@ -13,11 +13,10 @@ import {
   List
 } from "./styles"
 
+
 export default function Objetivos() {
   const [storange, setStorange] = useState([])
   const [goals, setGoals] = useState([])
-  const [modal, setModal] = useState(false)
-  const [input, setInput] = useState("")
 
   useEffect(() => {
     const getStorange = JSON.parse(localStorage.getItem('goal'))
@@ -28,25 +27,13 @@ export default function Objetivos() {
     
   }, [])
 
-  const add = () => {
-    const getStorange = JSON.parse(localStorage.getItem('goals'))
-    const newSo = {
-      goal: input
-    }
-
-    setGoals([...goals, newSo])
-    setModal(false)
-
-  }
-
-
 
   return (
     <Container>
       <Content>
-        {storange.map(item => (
-          <>
-            <ContainerExplanation background={item.background}>
+        {storange.map((item, index)  => (
+          <div key={index}>
+            <ContainerExplanation key={index} background={item.background}>
               <BoxContentGoals>
                 <h3>Objetivos de Desenvolvimento Sustentável</h3>
                 <span>{item.id}</span>
@@ -63,18 +50,12 @@ export default function Objetivos() {
                   <li> <span>{index +1}.</span> {item.goal}</li>
                 </List>
               ))}
-              <button onClick={() => (setModal(true))}>Adiconar Soluccao</button>
+
             </ContainerGoals>
-          </>
+          </div>
         ))}
 
-        {modal && (
-          <div>
-            <input type="text" onChange={e => {setInput(e.target.value)}}/>
-            <button onClick={() => {add()}}>Adicionar</button>
-            <button onClick={() => {setModal(false)}}>fechar</button>
-          </div>
-        )}
+        
         </Content>
     </Container>
   )

@@ -13,7 +13,7 @@ export const Goals = [
     title: "Educação de qualidade",
     img: Book,
     background: '#E5243B',
-    description: "Erradicar a pobreza em todas as formas e em todos os lugares",
+    description: "Melhorar a educação de todas as formas",
     objective: "Acabar com a pobreza em todas as suas formas, em todos os lugares",
     goals: [{
       goal: "Reunir os responsáveis para ir nas cres reclamarem de falta de professores.",
@@ -36,16 +36,16 @@ export const Goals = [
     img: Economics,
     description: "Jonas",
     goals: [{
-      goal: "Mudar o mundo",
+      goal: "Solucao em processo.",
     },
     {
-      goal: "Mudar o mundo",
+      goal: "Solucao em processo.",
     },
     {
-      goal: "Mudar o mundo",
+      goal: "Solucao em processo.",
     },
     {
-      goal: "Mudar o mundo",
+      goal: "Solucao em processo.",
     }
   ]
   },
@@ -56,20 +56,16 @@ export const Goals = [
     background: '#4C9F38',
     description: "Eronar",
     goals: [{
-
-      goal: "Até 2030, reduzir a taxa de mortalidade materna global para menos de 70 mortes por 100.000 nascidos vivos",
+      goal: "Solucao em processo.",
     },
     {
-
-      goal: "Até 2030, reduzir a taxa de mortalidade materna global para menos de 70 mortes por 100.000 nascidos vivos",
+      goal: "Solucao em processo.",
     },
     {
-
-      goal: "Até 2030, reduzir a taxa de mortalidade materna global para menos de 70 mortes por 100.000 nascidos vivos",
+      goal: "Solucao em processo.",
     },
     {
-
-      goal: "Até 2030, reduzir a taxa de mortalidade materna global para menos de 70 mortes por 100.000 nascidos vivos",
+      goal: "Solucao em processo.",
     }
   ]
   },
@@ -80,16 +76,16 @@ export const Goals = [
     background: '#C5192D',
     description: "Fome zero e agricultura sustentável",
     goals: [{
-      goal: "Mudar o mundo",
+      goal: "Solucao em processo.",
     },
     {
-      goal: "Mudar o mundo",
+      goal: "Solucao em processo.",
     },
     {
-      goal: "Mudar o mundo",
+      goal: "Solucao em processo.",
     },
     {
-      goal: "Mudar o mundo",
+      goal: "Solucao em processo.",
     }
   ]
   },
@@ -100,16 +96,16 @@ export const Goals = [
     background: '#FF3A21',
     description: "Eronar",
     goals: [{
-      goal: "Mudar o mundo",
+      goal: "Solucao em processo.",
     },
     {
-      goal: "Mudar o mundo",
+      goal: "Solucao em processo.",
     },
     {
-      goal: "Mudar o mundo",
+      goal: "Solucao em processo.",
     },
     {
-      goal: "Mudar o mundo",
+      goal: "Solucao em processo.",
     }
   ]
   },
