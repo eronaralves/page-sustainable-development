@@ -1,19 +1,20 @@
 
 
 //Images
-import Book from "../assets/books.png"
-import heart from "../assets/heart.png"
+import Books from "../assets/books.png"
 import HeartBeat from "../assets/heartbeat.png"
 import Economics from "../assets/economics.png"
+import Saneamento from "../assets/saneamento.png"
+import Trash from "../assets/trash.png"
 
 
 export const Goals = [
   {
     id: 1,
     title: "Educação de qualidade",
-    img: Book,
+    img: Books,
     background: '#E5243B',
-    description: "Melhorar a educação de todas as formas",
+    description: "Garantir que as pessoas tenham uma melhor educação de todas as formas",
     objective: "Acabar com a pobreza em todas as suas formas, em todos os lugares",
     goals: [{
       goal: "Reunir os responsáveis para ir nas cres reclamarem de falta de professores.",
@@ -22,90 +23,90 @@ export const Goals = [
       goal: "Ter aulas com temas mais abrangentes para os alunos, além das aulas convencionais.",
     },
     {
-      goal: "Solucao em processo.",
+      goal: "Solução em processo.",
     },
     {
-      goal: "Solucao em processo.",
+      goal: "Solução em processo.",
     }
   ]
   },
   {
     id: 2,
-    title: "Educação minicipal",
+    title: "Trabalhos",
     background: '#DDA83A',
     img: Economics,
-    description: "Jonas",
+    description: "Garantir que as pessoas tenham trabalhos que elas gostem.",
     goals: [{
-      goal: "Solucao em processo.",
+      goal: "Solução em processo.",
     },
     {
-      goal: "Solucao em processo.",
+      goal: "Solução em processo.",
     },
     {
-      goal: "Solucao em processo.",
+      goal: "Solução em processo.",
     },
     {
-      goal: "Solucao em processo.",
+      goal: "Solução em processo.",
     }
   ]
   },
   {
     id: 3,
-    title: "Educação minicipal",
+    title: "Saúde de quialidade",
     img: HeartBeat,
     background: '#4C9F38',
-    description: "Eronar",
+    description: "Garantir que as pessoas possam ter uma boa saúde.",
     goals: [{
-      goal: "Solucao em processo.",
+      goal: "Solução em processo.",
     },
     {
-      goal: "Solucao em processo.",
+      goal: "Solução em processo.",
     },
     {
-      goal: "Solucao em processo.",
+      goal: "Solução em processo.",
     },
     {
-      goal: "Solucao em processo.",
+      goal: "Solução em processo.",
     }
   ]
   },
   {
     id: 4,
-    title: "Educação minicipal",
-    img: "https://www.ribeirao2030.com.br/wp-content/uploads/2021/11/1-ERRADICACAO-DA-POBREZA@2x.png",
+    title: "Saneamento Básico",
+    img: Saneamento,
     background: '#C5192D',
-    description: "Fome zero e agricultura sustentável",
+    description: "Proporcionar para as pessoas ter saneamento básico.",
     goals: [{
-      goal: "Solucao em processo.",
+      goal: "Solução em processo.",
     },
     {
-      goal: "Solucao em processo.",
+      goal: "Solução em processo.",
     },
     {
-      goal: "Solucao em processo.",
+      goal: "Solução em processo.",
     },
     {
-      goal: "Solucao em processo.",
+      goal: "Solução em processo.",
     }
   ]
   },
   {
     id: 5,
-    title: "Educação minicipal",
-    img: "https://www.ribeirao2030.com.br/wp-content/uploads/2021/11/1-ERRADICACAO-DA-POBREZA@2x.png",
+    title: "Lixos nas Ruas",
+    img: Trash,
     background: '#FF3A21',
-    description: "Eronar",
+    description: "Deixar nossas ruas mais limpas consequentemente ter um mundo mais limpo",
     goals: [{
-      goal: "Solucao em processo.",
+      goal: "Ter a em espaço proximos lixeiras para colocar seu lixo.",
     },
     {
-      goal: "Solucao em processo.",
+      goal: "Colocar nos lugares certos o lixo para os garis vim e recolher.",
     },
     {
-      goal: "Solucao em processo.",
+      goal: "Solução em processo.",
     },
     {
-      goal: "Solucao em processo.",
+      goal: "Solução em processo.",
     }
   ]
   },

@@ -4,8 +4,6 @@ import {
   Container,
   Content,
   ContainerGoals,
-  DarkMode,
-  Span
 } from "./styles"
 
 // Components
@@ -13,10 +11,8 @@ import CardGoals from "../../Components/CardGoals";
 
 // Ultis
 import {Goals} from "../../Ultis"
+import ButtonDarkMode from "../../Components/ButtonDarkMode";
 
-// Icons
-import {FaMoon} from "react-icons/fa"
-import {GiBedLamp} from "react-icons/gi"
 
 export default function Home() {
   const [goalsProfile, setGoalsProfile] = useState(Goals)
@@ -25,7 +21,10 @@ export default function Home() {
   const darkContainer = useRef()
   const darkContent = useRef()
 
+  const storageDark = JSON.parse(localStorage.getItem("dark")) || []
+
   useEffect(() => {
+    
     const storagePosters = JSON.parse(localStorage.getItem("goal")) || []
 
     if(storagePosters.length > 0) {
@@ -34,12 +33,12 @@ export default function Home() {
       localStorage.setItem("goal", JSON.stringify(Goals))
       setGoalsProfile(Goals)
     }
-    
-  }, [])
 
+    setDarkMode(storageDark.dark)
+  }, [])
+  
   // DarkMode
   useEffect(() => {
-
     if(darkMode) {
       darkContainer.current.style.backgroundColor = "#121214"
       darkContainer.current.style.color = "#E1E1E6"
@@ -53,12 +52,19 @@ export default function Home() {
       darkContent.current.style.backgroundColor = "#fff"
       darkContent.current.style.color = "#121214"
     }
-    
+
+    if(darkMode) {
+      localStorage.setItem('dark', JSON.stringify({dark: true}))
+    } else {
+      localStorage.setItem('dark', JSON.stringify({dark: false}))
+    }
+  
   }, [darkMode])
 
-  const mudarTema = () => {
+  const ChangeColor = () => {
     setDarkMode(!darkMode)
   }
+
 
   const openGoalsPage = (id) => {
     localStorage.setItem("goal", JSON.stringify(id))
@@ -76,13 +82,7 @@ export default function Home() {
           ))}
         </ContainerGoals>
       </Content>
-      <DarkMode onClick={() => {mudarTema()}} darkMode={darkMode}>
-        {darkMode ? <GiBedLamp size={20}/> : <FaMoon size={20}/>}
-          <Span>
-            <span></span>
-            Modo {darkMode ? "Claro" : "Escuro"} 
-          </Span>
-      </DarkMode>
+      <ButtonDarkMode darkMode={darkMode} setDarkMode={setDarkMode} functionModeDark={() => {ChangeColor()}}/>
     </Container>
   )
 }

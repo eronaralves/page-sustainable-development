@@ -2,12 +2,11 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 100%;
 `
 export const Content = styled.div`
   width: 100%;
   max-width: 1200px;
-  height: 100vh;
   margin-inline: auto;
   
 `
