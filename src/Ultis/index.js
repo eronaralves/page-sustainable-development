@@ -23,24 +23,24 @@ export const Goals = [
       goal: "Ter aulas com temas mais abrangentes para os alunos, além das aulas convencionais.",
     },
     {
-      goal: "Solução em processo.",
+      goal: " Capacitação e valorização dos professores.",
     },
     {
-      goal: "Solução em processo.",
+      goal: "Desenvolvimento das habilidades socioemocionais do aluno",
     }
   ]
   },
   {
     id: 2,
-    title: "Trabalhos",
-    background: '#DDA83A',
-    img: Economics,
-    description: "Garantir que as pessoas tenham trabalhos que elas gostem.",
+    title: "Saúde de quialidade",
+    img: HeartBeat,
+    background: '#4C9F38',
+    description: "Garantir que as pessoas possam ter uma boa saúde.",
     goals: [{
-      goal: "Solução em processo.",
+      goal: "É fundamental a utilização de tecnologias como as plataformas digitais para marcação de consultas e exames, além de registros de prontuários médicos com o histórico do paciente.",
     },
     {
-      goal: "Solução em processo.",
+      goal: "Melhorar a Regulação em Saúde para diminuir com as filas.",
     },
     {
       goal: "Solução em processo.",
@@ -52,46 +52,26 @@ export const Goals = [
   },
   {
     id: 3,
-    title: "Saúde de quialidade",
-    img: HeartBeat,
-    background: '#4C9F38',
-    description: "Garantir que as pessoas possam ter uma boa saúde.",
-    goals: [{
-      goal: "Solução em processo.",
-    },
-    {
-      goal: "Solução em processo.",
-    },
-    {
-      goal: "Solução em processo.",
-    },
-    {
-      goal: "Solução em processo.",
-    }
-  ]
-  },
-  {
-    id: 4,
     title: "Saneamento Básico",
     img: Saneamento,
     background: '#C5192D',
     description: "Proporcionar para as pessoas ter saneamento básico.",
     goals: [{
-      goal: "Solução em processo.",
+      goal: "Preservar rios e mananciais.",
     },
     {
-      goal: "Solução em processo.",
+      goal: "Reduzir o vazamento de água potável.",
     },
     {
-      goal: "Solução em processo.",
+      goal: "Coletar o esgoto de forma correta.",
     },
     {
-      goal: "Solução em processo.",
+      goal: "Como educação é a base de tudo, investir em educação ambiental.",
     }
   ]
   },
   {
-    id: 5,
+    id: 4,
     title: "Lixos nas Ruas",
     img: Trash,
     background: '#FF3A21',
@@ -103,10 +83,10 @@ export const Goals = [
       goal: "Colocar nos lugares certos o lixo para os garis vim e recolher.",
     },
     {
-      goal: "Solução em processo.",
+      goal: "Planejar suas compras para diminuir o desperdício.",
     },
     {
-      goal: "Solução em processo.",
+      goal: 'Dar preferência às embalagens retornáveis. "Quando jogamos alguma coisa fora, não estamos nos livrando de um pequeno resíduo, mas aumentando o problema da poluição"',
     }
   ]
   },
