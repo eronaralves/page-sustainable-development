@@ -5,6 +5,7 @@ import {
 } from "react-router-dom"
 
 import Routes from "./routes"
+import { DarkProvider } from "./context/darkmode"
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -26,8 +27,10 @@ export default function App() {
 
   return (
     <Router>
-      <GlobalStyle/>
-      <Routes/>
+      <DarkProvider>
+        <GlobalStyle/>
+        <Routes/>
+      </DarkProvider>
     </Router>
   )
 }

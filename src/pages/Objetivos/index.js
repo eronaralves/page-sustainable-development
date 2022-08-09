@@ -15,12 +15,13 @@ import {
 
 // Components
 import ButtonDarkMode from "../../Components/ButtonDarkMode"
+import { useDarkMode } from "../../context/darkmode"
 
 
 export default function Objetivos() {
   const [storange, setStorange] = useState([])
   const [goals, setGoals] = useState([])
-  const [darkMode, setDarkMode] = useState(false)
+  const {darkMode, setDarkMode} = useDarkMode()
 
   const darkContainer = useRef()
   const darkContent = useRef()
@@ -36,7 +37,6 @@ export default function Objetivos() {
     setStorange([getStorange])
     setGoals(getStorangeGoals)
 
-    setDarkMode(storageDark.dark)
 
   }, [])
 
@@ -56,11 +56,7 @@ export default function Objetivos() {
       darkContent.current.style.color = "#121214"
     }
 
-    if(darkMode) {
-      localStorage.setItem('dark', JSON.stringify({dark: true}))
-    } else {
-      localStorage.setItem('dark', JSON.stringify({dark: false}))
-    }
+    localStorage.setItem('dark', JSON.stringify(darkMode))
     
   }, [darkMode]) 
 

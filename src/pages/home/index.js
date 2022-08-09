@@ -12,16 +12,17 @@ import CardGoals from "../../Components/CardGoals";
 // Ultis
 import {Goals} from "../../Ultis"
 import ButtonDarkMode from "../../Components/ButtonDarkMode";
+import { useDarkMode } from "../../context/darkmode";
 
 
 export default function Home() {
   const [goalsProfile, setGoalsProfile] = useState(Goals)
-  const [darkMode, setDarkMode] = useState(false)
+  const {darkMode, setDarkMode} = useDarkMode()
 
   const darkContainer = useRef()
   const darkContent = useRef()
 
-  const storageDark = JSON.parse(localStorage.getItem("dark")) || []
+  const storageDark = JSON.stringify(localStorage.getItem("dark")) || []
 
   useEffect(() => {
     
@@ -34,15 +35,16 @@ export default function Home() {
       setGoalsProfile(Goals)
     }
 
-    setDarkMode(storageDark.dark)
+    setDarkMode(storageDark)
   }, [])
   
   // DarkMode
   useEffect(() => {
+
     if(darkMode) {
       darkContainer.current.style.backgroundColor = "#121214"
       darkContainer.current.style.color = "#E1E1E6"
-
+  
       darkContent.current.style.backgroundColor = "#121214"
       darkContent.current.style.color = "#E1E1E6"
     } else {
@@ -52,19 +54,9 @@ export default function Home() {
       darkContent.current.style.backgroundColor = "#fff"
       darkContent.current.style.color = "#121214"
     }
-
-    if(darkMode) {
-      localStorage.setItem('dark', JSON.stringify({dark: true}))
-    } else {
-      localStorage.setItem('dark', JSON.stringify({dark: false}))
-    }
   
+    localStorage.setItem('dark', JSON.stringify(darkMode))
   }, [darkMode])
-
-  const ChangeColor = () => {
-    setDarkMode(!darkMode)
-  }
-
 
   const openGoalsPage = (id) => {
     localStorage.setItem("goal", JSON.stringify(id))
@@ -82,7 +74,7 @@ export default function Home() {
           ))}
         </ContainerGoals>
       </Content>
-      <ButtonDarkMode darkMode={darkMode} setDarkMode={setDarkMode} functionModeDark={() => {ChangeColor()}}/>
+      <ButtonDarkMode darkMode={darkMode} setDarkMode={setDarkMode} functionModeDark={() => setDarkMode(!darkMode)}/>
     </Container>
   )
 }
