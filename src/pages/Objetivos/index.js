@@ -1,33 +1,50 @@
-import React, { useEffect, useState, useRef } from "react"
-
-
+import React, { useEffect, useState } from "react"
+import { useLocation } from "react-router-dom"
 // Styles
 import {
   Container,
   Content,
   ContainerExplanation,
-  BoxContentGoals,
   ContainerGoals,
-  ContentGoal,
+  List,
+  BoxContentGoals,
   BoxImageGoal,
-  List
 } from "./styles"
 
 // Components
 import ButtonDarkMode from "../../Components/ButtonDarkMode"
 import { useDarkMode } from "../../context/darkmode"
 
+//Ultis
+import {Goals} from "../../Ultis"
+
 
 export default function Objetivos() {
-  const {darkMode, setDarkMode, goal, solutions} = useDarkMode()
+  const {darkMode, setDarkMode} = useDarkMode()
+  const [goals, setGoals] = useState(Goals)
+  const [solutions, setSolutions] = useState([])
+
+  const {pathname} = useLocation()
+
+  const storageDark = JSON.stringify(localStorage.getItem("dark")) || []
+
+  useEffect(() => {
+
+    setDarkMode(storageDark)
+  }, [])
 
 
-  // DarkMode
   useEffect(() => {
     localStorage.setItem('dark', JSON.stringify(darkMode))
     
+    const filter = goals.filter(item => pathname.includes(item.id))
+    setGoals(filter)
+    console.log(filter[0].solutions)
+    setSolutions(filter[0].solutions)
+
   }, [darkMode]) 
 
+  
 
   const ChangeColor = () => {
     setDarkMode(!darkMode)
@@ -36,7 +53,7 @@ export default function Objetivos() {
   return (
     <Container background={darkMode}>
       <Content background={darkMode}>
-        {goal.map((item, index)  => (
+        {goals.map((item, index)  => (
           <div key={index}>
             <ContainerExplanation key={index} background={item.background}>
               <BoxContentGoals>

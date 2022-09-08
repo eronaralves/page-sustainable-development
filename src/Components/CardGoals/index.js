@@ -13,12 +13,12 @@ export default function CardGoals(props) {
 
   return (
     <LinkRouter background={props.background} onClick={props.openGoalsPage}>
-      <Link to={`/objetivos/${props.id}`} style={{ textDecoration: 'none' }}>
+      <Link to={`/Objetivos/${props.id}`} style={{ textDecoration: 'none' }}>
           <BoxTitleGoals>
             <strong>{props.id}</strong>
             <h2>{props.title}</h2>
           </BoxTitleGoals>
-          <img src={props.icon}/>
+          <img src={props.icon} alt={props.title}/>
       </Link>
     </LinkRouter>
   )

@@ -1,3 +1,4 @@
+import React from "react"
 import {
   Route,
   Routes
@@ -12,7 +13,7 @@ export default function RoutesLink() {
   return (
     <Routes>
       <Route path="/" element={<Home/>}/>
-      <Route path="/objetivos/:id" element={<Objetivos/>}/>
+      <Route path="/Objetivos/:id" element={<Objetivos/>}/>
     </Routes>
   )
 }

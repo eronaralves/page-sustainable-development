@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect,useState } from "react";
 // Styles
 import {
   Container,
@@ -16,7 +16,7 @@ import { useDarkMode } from "../../context/darkmode";
 
 
 export default function Home() {
-  const [goalsProfile, setGoalsProfile] = useState(Goals)
+  const [goalsProfile] = useState(Goals)
   const {darkMode, setDarkMode, setGoal, setSolutions} = useDarkMode()
 
 
@@ -34,10 +34,7 @@ export default function Home() {
     localStorage.setItem('dark', JSON.stringify(darkMode))
   }, [darkMode])
 
-  const openGoalsPage = (id) => {
-    setGoal([id])
-    setSolutions(id.solutions)
-  }
+
 
   return (
     <Container  background={darkMode}>
@@ -47,7 +44,7 @@ export default function Home() {
 
         <ContainerGoals>
           {goalsProfile.map((item, index) => (
-            <CardGoals key={index} id={item.id} title={item.title} icon={item.img} background={item.background} openGoalsPage={() => {openGoalsPage(item)}}/>
+            <CardGoals key={index} id={item.id} title={item.title} icon={item.img} background={item.background}/>
           ))}
         </ContainerGoals>
       </Content>
